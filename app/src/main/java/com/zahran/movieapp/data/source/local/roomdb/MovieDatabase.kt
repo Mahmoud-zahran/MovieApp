@@ -19,8 +19,8 @@ import com.zahran.movieapp.data.source.local.roomdb.entity.PopularMoviesEntity
 @TypeConverters(PopularMoviesEntityConverter::class)
 abstract class MovieDatabase  : RoomDatabase() {
     abstract fun getMovieDao(): MovieDao
-
     abstract fun getPopularMoviesDao(): PopularMoviesDao
+
     companion object {
         @Volatile
         private var INSTANCE: MovieDatabase? = null

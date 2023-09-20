@@ -15,6 +15,8 @@ data class PopularMoviesDto(@Json(name = "page")
     fun toPopularMoviesEntity(): PopularMoviesEntity {
         return PopularMoviesEntity(
             page = page,
+            //getting results from remote as a list of movieDto and
+            // add it to popularMovieEntity as a list of MovieEntity
             results = results.map { it.toMovieEntity() }
         )
     }
